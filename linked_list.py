@@ -24,3 +24,16 @@ class LinkedList(object):
         else:
             self.head = new_node
 
+
+    def print_ll(self):
+        current = self.head
+        if current:
+            print 'This is the linked list of nodes:'
+            while current.next:
+                print current.value
+                current = current.next
+            # Prints the last value in the list
+            print current.value
+        else:
+            print 'This is an empty list.'
+
