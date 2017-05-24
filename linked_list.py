@@ -37,3 +37,29 @@ class LinkedList(object):
         else:
             print 'This is an empty list.'
 
+    def get_node_value(self, position):
+        """Return the value of a node at a specified position in the list;
+        this method assumes the first position in the list is '1'; it returns
+        'None' if the specified position is not in the list or if the list
+        is empty"""
+        current = self.head
+        counter = 1
+        if position < 1:
+            print '\nYou must choose a position greater than 1.'
+            return None
+        # Make sure it is not an empty list
+        if current:
+            # Loop through the nodes
+            # Stop if the counter is above the position or if current = None
+            while current and counter <= position:
+                if counter == position:
+                    print '\nHere is the specified node value:'
+                    return current.value
+                current = current.next
+                counter += 1
+            print '\nThe specified position is not in this list.'
+            return None
+        else:
+            print '\nThis is an empty list (get_node_value() method).'
+            return None
+
