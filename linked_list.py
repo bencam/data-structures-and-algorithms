@@ -45,7 +45,7 @@ class LinkedList(object):
         current = self.head
         counter = 1
         if position < 1:
-            print '\nYou must choose a position greater than 1.'
+            print 'You must choose a position greater than 1.'
             return None
         # Make sure it is not an empty list
         if current:
@@ -53,13 +53,40 @@ class LinkedList(object):
             # Stop if the counter is above the position or if current = None
             while current and counter <= position:
                 if counter == position:
-                    print '\nHere is the specified node value:'
+                    print 'Here is the specified node value:'
                     return current.value
                 current = current.next
                 counter += 1
-            print '\nThe specified position is not in this list.'
+            print 'The specified position is not in this list.'
             return None
         else:
-            print '\nThis is an empty list (get_node_value() method).'
+            print 'This is an empty list (get_node_value() method).'
             return None
+
+    def insert(self, new_node, position):
+        """Insert a new node at a specified position; this method
+        assumes that the first position in the list is '1'; it
+        returns 'None' if the specified position is not in the list
+        or if the list is empty; (note that inserting a node as
+        position '2' means that the node will be placed between
+        nodes '1' and '2'); if the list is empty and the position specified
+        is '1', the new_node will be added as the only node in the list"""
+        current = self.head
+        counter = 1
+        if position > 1:
+            while current and counter < position:
+                if counter == position - 1:
+                    new_node.next = current.next
+                    current.next = new_node
+                    print 'New node ' + new_node.value + ' added.'
+                current = current.next
+                counter += 1
+            if counter < position:
+                print 'The position specified is out of range of this list.'
+        elif position == 1:
+            new_node.next = self.head
+            self.head = new_node
+            print 'New node ' + new_node.value + ' added.'
+        elif position < 1:
+            print 'To insert a node, a position >= 1 must be selected.'
 
