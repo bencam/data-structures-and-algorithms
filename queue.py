@@ -12,6 +12,8 @@ class Queue:
         return self.storage[0]
 
     def dequeue(self):
+        # By passing in 0 as a parameter, we are indicating that the
+        # first item in the list should be removed
         return self.storage.pop(0)
 
     def print_queue(self):
