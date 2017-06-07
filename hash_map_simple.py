@@ -1,6 +1,15 @@
 #!/usr/bin/env python
 
 
+"""
+A very simple hashing function with two methods:
+
+1. hash_function() simply creates a hash value
+
+2. insert() adds a given key-value pair into the hash map
+"""
+
+
 class HashTable(object):
 
     def __init__(self):
