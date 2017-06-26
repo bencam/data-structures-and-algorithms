@@ -90,3 +90,20 @@ class LinkedList(object):
         elif position < 1:
             print 'To insert a node, a position >= 1 must be selected.'
 
+    def delete(self, value):
+        """Delete the first node containing a specified value"""
+        current = self.head
+        counter = 1
+        while current:
+            if current.value == value:
+                # Check to see if it is the first node in the list
+                if counter == 1:
+                    self.head = current.next
+                # For all other nodes in the list
+                else:
+                    previous.next = current.next
+                print '\nNode ' + value + ' removed.'
+            previous = current
+            current = current.next
+            counter += 1
+
