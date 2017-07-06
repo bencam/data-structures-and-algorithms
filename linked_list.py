@@ -113,3 +113,8 @@ class LinkedList(object):
         new_node.next = self.head
         self.head = new_node
 
+    def delete_first(self):
+        """Delete the first (i.e. the head) node in the LinkedList
+        and return it"""
+        self.head = self.head.next
+
