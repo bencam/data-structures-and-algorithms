@@ -107,3 +107,9 @@ class LinkedList(object):
             current = current.next
             counter += 1
 
+    def insert_first(self, new_node):
+        """Insert a new node as the first (i.e. the head) node of the
+        LinkedList object"""
+        new_node.next = self.head
+        self.head = new_node
+
