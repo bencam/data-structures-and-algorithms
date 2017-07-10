@@ -4,8 +4,7 @@
 """
 A very simple hashing function with two methods:
 
-1. hash_function() simply creates a hash value
-
+1. hash_function() creates a simple hash value
 2. insert() adds a given key-value pair into the hash map
 """
 
