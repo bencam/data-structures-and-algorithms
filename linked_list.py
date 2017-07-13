@@ -1,6 +1,24 @@
 #!/usr/bin/env python
 
 
+"""
+A basic example of a linked list. The file includes two classes:
+
+1. Node
+Each node is initialized with a value (or data) and a next variable,
+which points to the next node in the linked list. By default, the next
+variable is set to None (thereby preventing an error if there is only
+one node in the list).
+
+2. LinkedList
+Each linked list is initialized with a head variable (the head being
+the first node in the linked list). The class also includes several
+methods:
+
+<< List methods here >>
+"""
+
+
 class Node(object):
 
     def __init__(self, value):
@@ -13,7 +31,6 @@ class LinkedList(object):
     def __init__(self, head=None):
         self.head = head
 
-
     def append(self, new_node):
         """Add a node to the end (or tail) of the linked list"""
         current = self.head
@@ -23,7 +40,6 @@ class LinkedList(object):
             current.next = new_node
         else:
             self.head = new_node
-
 
     def print_ll(self):
         current = self.head
