@@ -29,3 +29,22 @@ class BinaryTree(object):
                     or self.preorder_search(start.right, find_val)
         return False
 
+
+# Testing ---
+# Create an instance of a binary tree with one node (the root)
+# (Note that the BinaryTree class's __init__() method calls the Node
+# class, passing in the root as the argument; as a result an instance
+# of a binary tree is created along with it's first node.)
+tree = BinaryTree('apple')
+
+# Add six nodes to the binary tree instance
+tree.root.left = Node('banana')
+tree.root.right = Node('babka')
+tree.root.left.left = Node('chocolate')
+tree.root.left.right = Node('cranberry')
+tree.root.right.right = Node('corn')
+tree.root.right.left = Node('carrot')
+
+# Call the BinaryTree's search method (search for the 'carrot' node)
+print tree.search('carrot')
+
