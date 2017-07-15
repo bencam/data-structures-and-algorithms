@@ -45,6 +45,11 @@ tree.root.left.right = Node('cranberry')
 tree.root.right.right = Node('corn')
 tree.root.right.left = Node('carrot')
 
-# Call the BinaryTree's search method (search for the 'carrot' node)
+# Call the BinaryTree's search method and search for the 'carrot' node
+# (This should return True)
 print tree.search('carrot')
+
+# Test the BinaryTree's search method with a node that doesn't exist
+# (This should return False)
+print tree.search('pancake')
 
