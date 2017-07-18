@@ -29,6 +29,20 @@ class BinaryTree(object):
                     or self.preorder_search(start.right, find_val)
         return False
 
+    def print_tree(self):
+        """Print out all of the tree nodes as each one is visited
+        in a pre-order traversal."""
+        return self.preorder_print(self.root, "")[:-1]
+
+    def preorder_print(self, start, traversal):
+        """A helper method used to recursivelly print tree nodes."""
+        if start:
+            print start.value
+            traversal += (str(start.value) + '-')
+            traversal = self.preorder_print(start.left, traversal)
+            traversal = self.preorder_print(start.right, traversal)
+        return traversal
+
 
 # Testing ---
 # Create an instance of a binary tree with one node (the root)
