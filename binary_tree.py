@@ -67,3 +67,6 @@ print tree.search('carrot')
 # (This should return False)
 print tree.search('pancake')
 
+# Test the BinaryTree's print_tree() method
+print tree.print_tree()
+
