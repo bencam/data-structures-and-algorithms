@@ -1,6 +1,29 @@
 #!/usr/bin/env python
 
 
+"""
+A binary tree implementation made up of two classes:
+
+1. Node
+Each instance of a node consists of a value (i.e. data), a pointer
+to the left node and a pointer to the right node. When an instance
+of a node is created, the right and left node pointers are set to
+None by default.
+
+2. BinaryTree
+Each instance contains a root, which is created by calling the
+Node class. In addition to the __init__() method, the BinaryTree
+class consists of four methods:
+
+1. search()
+2. preorder_search()
+3. print_tree()
+4. preorder_print()
+
+A simple set of tests follow the Node and BinaryTree classes.
+"""
+
+
 class Node(object):
 
     def __init__(self, value):
