@@ -15,10 +15,19 @@ Each instance contains a root, which is created by calling the
 Node class. In addition to the __init__() method, the BinaryTree
 class consists of four methods:
 
-1. search()
-2. preorder_search()
-3. print_tree()
-4. preorder_print()
+1. search() - returns True if a specified value is contained in
+the binary tree; returns False otherwise. Parameter(s): find_val.
+
+2. preorder_search() - a helper method for the search() method;
+preorder_search() looks for each specified value recursively.
+Parameter(s): start, find_val.
+
+3. print_tree() - prints out all of the tree nodes as each is
+visited ina pre-order traversal. Parameter(s): none.
+
+4. preorder_print() - A helper method for the print_tree()
+method; it recursively traverses the nodes. Parameter(s):
+start, traversal.
 
 A simple set of tests follow the Node and BinaryTree classes.
 """
