@@ -28,7 +28,6 @@ class HashMap(object):
         """Initialize a hash map with 10,000 buckets or spots."""
         self.table = [None] * 10000
 
-
     def store(self, string):
         """Stores a string in the hash map."""
         # Give the string a hash value
@@ -41,4 +40,16 @@ class HashMap(object):
                 self.table[hash_value].append(string)
             else:
                 self.table[hash_value] = [string]
+
+    def lookup(self, string):
+        """Return the hash value if the string is already in the table.
+        Return -1 otherwise."""
+        # Give the string a hash value
+        hash_value = self.calculate_hash_value(string)
+        if hash_value != -1:
+            if self.table[hash_value] != None:
+                # Is the string in the following hv for the table?
+                if string in self.table[hash_value]:
+                    return hash_value
+        return -1
 
