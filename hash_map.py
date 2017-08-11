@@ -53,3 +53,8 @@ class HashMap(object):
                     return hash_value
         return -1
 
+    def calculate_hash_value(self, string):
+        """Helper function to calulate a hash value from a string."""
+        hash_value = (ord(string[0]) * 100) + ord(string[1])
+        return hash_value
+
