@@ -13,9 +13,12 @@ value of None.
 spot where the string is to be inserted already contains a string,
 the string is appended to the bucket. Parameter(s): string.
 
-3. lookup() - 
+3. lookup() - returns the hash value of a string if the string is
+already in the hash map. If the string is not in the hash map, lookup()
+returns -1. Parameter(s): string.
 
-4. calculate_hash_value() - 
+4. calculate_hash_value() - a helper function used to caluculate
+a hash value for a string; returns a hash value. Parameter(s): string
 
 5. get_value() - 
 """
