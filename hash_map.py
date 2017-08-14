@@ -61,3 +61,8 @@ class HashMap(object):
         hash_value = (ord(string[0]) * 100) + ord(string[1])
         return hash_value
 
+    def get_value(self, hash_value):
+        """Return the value of a hash."""
+        if self.table[hash_value] != None:
+            return self.table[hash_value]
+
