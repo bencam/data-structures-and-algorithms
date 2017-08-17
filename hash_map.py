@@ -18,9 +18,9 @@ already in the hash map. If the string is not in the hash map, lookup()
 returns -1. Parameter(s): string.
 
 4. calculate_hash_value() - a helper function used to caluculate
-a hash value for a string; returns a hash value. Parameter(s): string
+a hash value for a string; returns a hash value. Parameter(s): string.
 
-5. get_value() - 
+5. get_value() - return the value of a hash. Parameter(s): hash_value.
 """
 
 
