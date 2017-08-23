@@ -1,6 +1,19 @@
 #!/usr/bin/env python
 
 
+class Node(object):
+
+    def __init__(self, value):
+        self.value = value
+        self.next = None
+
+
+class LinkedList(object):
+
+    def __init__(self, head=None):
+        self.head = head
+
+
 class Stack(object):
 
     def __init__(self,top=None):
