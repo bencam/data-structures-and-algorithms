@@ -12,10 +12,25 @@ one node in the list).
 
 2. LinkedList
 Each linked list is initialized with a head variable (the head being
-the first node in the linked list). The class also includes several
-methods:
+the first node in the linked list). The class also includes eight methods:
 
-<< List methods here >>
+1. __init__() - creates the linked list with the head (or first node)
+set to None by default. Parameter(s): head (optional).
+
+2. append() - adds a node to the end (or tail) of the linked list.
+Parameter(s): new_node.
+
+3. print_ll() - prints each node in the linked list. No parameters.
+
+4. get_node_value() - 
+
+5. insert() - 
+
+6. delete() - 
+
+7. insert_first() - 
+
+8. delete_first() - 
 """
 
 
