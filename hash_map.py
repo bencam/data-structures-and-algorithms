@@ -4,7 +4,7 @@
 """
 A hash map implementation with one class (HashMap).
 
-The HashMap class consists to five methods:
+The HashMap class consists of five methods:
 
 1. __init__() - creates a list of 10,000 buckets set to a default
 value of None.
