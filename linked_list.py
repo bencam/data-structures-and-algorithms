@@ -22,9 +22,13 @@ Parameter(s): new_node.
 
 3. print_ll() - prints each node in the linked list. No parameters.
 
-4. get_node_value() - 
+4. get_node_value() - returns the value of a node at a specified position
+in the list and returns 'None' if the specified position is not in the list
+or if the list is empty. Parameter(s): position.
 
-5. insert() - 
+5. insert() - inserts a new node at a specified position in the list and
+returns 'None' if the specified position is not in the list or if the list
+is empty. Parameter(s): new_node, position.
 
 6. delete() - 
 
