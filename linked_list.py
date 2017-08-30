@@ -102,10 +102,11 @@ class LinkedList(object):
         """Insert a new node at a specified position; this method
         assumes that the first position in the list is '1'; it
         returns 'None' if the specified position is not in the list
-        or if the list is empty; (note that inserting a node as
-        position '2' means that the node will be placed between
-        nodes '1' and '2'); if the list is empty and the position specified
-        is '1', the new_node will be added as the only node in the list"""
+        or if the list is empty (and the position specified is not '1');
+        if the list is empty and the position specified is '1', the
+        new_node will be added as the only node in the list; (note that
+        inserting a node at position '2' means that the node will be placed
+        between nodes '1' and '2')"""
         current = self.head
         counter = 1
         if position > 1:
@@ -118,12 +119,14 @@ class LinkedList(object):
                 counter += 1
             if counter < position:
                 print 'The position specified is out of range of this list.'
+                return None
         elif position == 1:
             new_node.next = self.head
             self.head = new_node
             print 'New node ' + new_node.value + ' added.'
         elif position < 1:
             print 'To insert a node, a position >= 1 must be selected.'
+            return None
 
     def delete(self, value):
         """Delete the first node containing a specified value"""
