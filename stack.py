@@ -35,6 +35,19 @@ class LinkedList(object):
         else:
             print 'This is an empty list.'
 
+    def insert_first(self, new_node):
+        """Insert a new node as the first (i.e. the head) node of the
+        LinkedList object"""
+        new_node.next = self.head
+        self.head = new_node
+
+    def delete_first(self):
+        """Delete the first (i.e. the head) node in the LinkedList
+        and return it"""
+        original_head = self.head
+        self.head = self.head.next
+        return original_head
+
 
 class Stack(object):
 
