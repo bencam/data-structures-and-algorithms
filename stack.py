@@ -1,6 +1,14 @@
 #!/usr/bin/env python
 
 
+"""
+A simple implementation of a stack using a linked list (rather than an
+array). The linked list makes it possible for the stack to expand and
+shrink as needed (however, extra memory is required as each node needs
+a pointer, or next, attribute).
+"""
+
+
 class Node(object):
 
     def __init__(self, value):
