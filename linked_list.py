@@ -79,9 +79,6 @@ class LinkedList(object):
         is empty"""
         current = self.head
         counter = 1
-        if position < 1:
-            print 'You must choose a position greater than 1.'
-            return None
         # Make sure it is not an empty list
         if current:
             # Loop through the nodes
@@ -95,7 +92,7 @@ class LinkedList(object):
             print 'The specified position is not in this list.'
             return None
         else:
-            print 'This is an empty list (get_node_value() method).'
+            print 'This is an empty list.'
             return None
 
     def insert(self, new_node, position):
