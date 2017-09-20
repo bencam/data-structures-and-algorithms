@@ -4,13 +4,13 @@
 """
 A basic example of a linked list. The file includes two classes:
 
-1. Node
+Node
 Each node is initialized with a value (or data) and a next variable,
 which points to the next node in the linked list. By default, the next
 variable is set to None (thereby preventing an error if there is only
 one node in the list).
 
-2. LinkedList
+LinkedList
 Each linked list is initialized with a head variable (the head being
 the first node in the linked list). The class also includes eight methods:
 
