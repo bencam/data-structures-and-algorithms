@@ -19,8 +19,10 @@ def binary_search(input_array, value):
     return -1
 
 
-# Note: in Python 3, normal division yields decimals
+"""
+Note: in Python 3, normal division yields decimals
 (e.g. `7 / 2` returns `3.5`), which would cause problems
 for this algorithm. Floor division (i.e. `//`) in Python 3,
 however, yields whole integers.
+"""
 
